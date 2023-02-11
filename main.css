@@ -1,0 +1,132 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Cream);
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+
+}
+
+.Previw {
+    position: relative;
+    margin-top: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    border-radius: 5%;
+    width: 50%;
+
+}
+
+.box1 {
+    width: 50%;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5% 0 0 5%;
+
+}
+
+.box2 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+p {
+    Font-size: 14px;
+    color: gray;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h6 {
+    letter-spacing: 5px;
+    color: gray;
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    color: black;
+}
+
+.price span:first-child {
+    color: var(--Darkcyan);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.price::after {
+    content: '$169.99';
+    text-decoration: line-through;
+    position: absolute;
+    font-size: 16px;
+    transform: translate(50%,50%);
+}
+button{
+    background-color: var(--Darkcyan);
+    border-radius: 10%;
+    color: var(--White);
+    width: 90%;
+    height: 50px;
+    margin-top: 5rem;
+    border: none;
+    
+}
+button::before{
+    content: url(./images/icon-cart.svg);
+    position: absolute;
+    transform: translate(-23px, -4%);
+
+}
+button:hover{
+    background-color: var(--Verydarkblue);
+}
+@media (max-width:700px){
+    .Previw{
+        flex-direction: column;
+        width:70%;
+        justify-content: center;
+    }
+    .box1{
+        flex-direction: row;
+        width: 100%;
+    }
+    .box2{
+        flex-direction: column;
+        width: 100%;
+    }
+    img{
+        width: 100%;
+        height: 300px;
+    }
+}
